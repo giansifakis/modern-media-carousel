@@ -1,0 +1,107 @@
+/* WordPress editor and listing styles only. */
+.mmc-admin-gallery { padding: 4px 2px 8px; }
+.mmc-admin-intro { color: #5b6470; margin-top: 2px; margin-bottom: 18px; }
+.mmc-admin-images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 0 0 18px;
+  padding: 0;
+}
+.mmc-admin-images .mmc-admin-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 154px;
+  width: 154px;
+  margin: 0;
+  padding: 7px;
+  overflow: hidden;
+  border: 1px solid #d9dfe7;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 7px rgba(0, 15, 40, .035);
+}
+.mmc-admin-thumbnail {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 16/10;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #f0f3f8;
+}
+.mmc-admin-thumbnail img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.mmc-admin-item-name {
+  display: block;
+  min-width: 0;
+  margin: 9px 3px 8px;
+  color: #303947;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mmc-admin-item-actions { display: flex; gap: 8px; }
+.mmc-admin-item-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #d9dfe7;
+  border-radius: 6px;
+  background: #f9fafc;
+  color: #465366;
+  cursor: pointer;
+}
+.mmc-admin-item-actions .mmc-admin-handle { flex: 1; cursor: grab; }
+.mmc-admin-item-actions .mmc-admin-handle:active { cursor: grabbing; }
+.mmc-admin-item-actions button:hover { color: #135e96; border-color: #96b6d1; background: #f0f7fc; }
+.mmc-admin-item-actions .mmc-admin-remove:hover { color: #b32d2e; border-color: #e7b6b6; background: #fff5f5; }
+.mmc-admin-item-actions button:focus-visible { outline: 2px solid #2271b1; outline-offset: 1px; }
+.mmc-admin-placeholder {
+  flex: 0 0 154px;
+  width: 154px;
+  height: 184px;
+  margin: 0;
+  border: 2px dashed #8fbde6;
+  border-radius: 12px;
+  background: #f0f7fc;
+}
+.mmc-admin-images .ui-sortable-helper { box-shadow: 0 12px 30px rgba(5,27,50,.18); }
+.mmc-admin-empty {
+  min-height: 145px;
+  padding: 28px;
+  margin: 0 0 18px;
+  border: 1px dashed #c7d0dd;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #657285;
+  text-align: center;
+}
+.mmc-admin-empty[hidden] { display: none; }
+.mmc-admin-empty > * { display: block; margin: 0 auto; }
+.mmc-admin-empty .dashicons { width: 33px; height: 33px; font-size: 33px; color: #94a6bd; margin-bottom: 8px; }
+.mmc-admin-empty strong { color: #253449; font-size: 14px; margin-bottom: 5px; }
+.mmc-admin-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 0 0 12px; }
+.mmc-admin-toolbar .button { display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
+.mmc-admin-toolbar .dashicons { width: 17px; height: 17px; font-size: 17px; }
+.mmc-admin-count { margin-left: auto; color: #677482; font-size: 12px; }
+.mmc-admin-gallery .description { margin-bottom: 0; }
+.mmc-shortcode-box p { margin-top: 0; }
+.mmc-shortcode-field { font-family: Consolas, Monaco, monospace; margin-bottom: 10px; }
+.mmc-copy-shortcode .dashicons { height: 17px; width: 17px; font-size: 16px; vertical-align: middle; }
+.column-mmc_shortcode { width: 260px; }
+.column-mmc_images { width: 85px; }
+.column-mmc_shortcode code { white-space: nowrap; font-size: 12px; }
+@media(max-width: 782px) {
+  .mmc-admin-images { gap: 10px; }
+  .mmc-admin-images .mmc-admin-item, .mmc-admin-placeholder { flex-basis: 133px; width: 133px; }
+  .mmc-admin-item-actions button { min-height: 34px; }
+  .mmc-admin-count { margin-left: 0; }
+}
